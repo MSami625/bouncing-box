@@ -20,16 +20,14 @@ function setup(){
     mainbox.velocityX=3;
     mainbox.velocityY=6;
 
-    box1=createSprite(700,590,200,30);
+    box1=createSprite(700,590,180,30);
     box1.shapeColor="yellow";
-    box2=createSprite(500,590,200,30);
+    box2=createSprite(500,590,180,30);
     box2.shapeColor="green";
-    box3=createSprite(300,590,200,30);
+    box3=createSprite(300,590,180,30);
     box3.shapeColor="blue";
-    box4=createSprite(100,590,200,30);
+    box4=createSprite(100,590,180,30);
     box4.shapeColor="red";
-
-    music.loop();
 }
 
 function draw() {
@@ -55,9 +53,9 @@ function draw() {
          mainbox.shapeColor= "blue";
      }
  
- 
      if(mainbox.isTouching(box4) && mainbox.bounceOff(box4)){
         mainbox.shapeColor= "red";
+        music.loop();    
      }
     drawSprites();
         text(mouseX+','+mouseY,100,45); 
