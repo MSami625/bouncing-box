@@ -17,8 +17,8 @@ function setup(){
     //create 4 different surfaces
     mainbox=createSprite(random(20,750),200,40,40);
     mainbox.shapeColor="white";
-    mainbox.velocityX=3;
-    mainbox.velocityY=6;
+    mainbox.velocityX=4;
+    mainbox.velocityY=7;
 
     box1=createSprite(700,590,180,30);
     box1.shapeColor="yellow";
