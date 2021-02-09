@@ -37,35 +37,27 @@ function draw() {
     //create edgeSprite
     edges=createEdgeSprites();
     mainbox.bounceOff(edges);
-    box1.collide(edges);
-    box2.collide(edges);
-    box3.collide(edges);
-    box4.collide(edges);
-    mainbox.bounceOff(box1);
-    mainbox.bounceOff(box3);
-    mainbox.bounceOff(box4);
-    
     
     //add condition to check if box touching surface and make it box
 
     if(mainbox.isTouching(box2)){
-        mainbox.velocityY=0;
+        mainbox.shapeColor="green";
         mainbox.velocityX=0;
-        mainbox.shapeColor=rgb(0,100,0);
+        mainbox.velocityY=0;
         music.stop();
       }
 
      if(mainbox.isTouching(box1) && mainbox.bounceOff(box1)){
-        mainbox.shapeColor= rgb(0,0,255);
+        mainbox.shapeColor= "yellow";
      }
  
      if(mainbox.isTouching(box3) && mainbox.bounceOff(box3)){
-         mainbox.shapeColor= rgb(255,128,0);
+         mainbox.shapeColor= "blue";
      }
  
  
      if(mainbox.isTouching(box4) && mainbox.bounceOff(box4)){
-        mainbox.shapeColor= rgb(153,0,76);
+        mainbox.shapeColor= "red";
      }
     drawSprites();
         text(mouseX+','+mouseY,100,45); 
